@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 
+	Соединить задание 1 и 2
+
+	Напишите функцию validate которая проверяет все поля формы и возвращает результат в виде обьекта со свойствами firstname, lastname и tel.
+
+	Кроме того, формат объекта: в свойства записывается буль-флаг уведомляющий о статусе прохождения валидации для поля.
+
+	При клике на кнопку submit должна происходить проверка.
+
+	Визуализировать результат проверки.
+    Написать функцию showResults(results), которая принимает один аргумент results - объект такого формата который возвращает функция validate, и создает html разметку по результатам этого объекта.
+  
+    showResults добавляет в список с классом .results 
+    (уже есть в html), li для каждого поля формы. В li записать:
+    SUCCESS: 'имя поля' passed validation
+    ERROR: 'имя поля' failed validation
+  
+    Для li с положительным результатом дать класс success, с отрицательным error.
+ -->
+ 
+	<div class="wrapper">	
+
+		<div class="container">
+		  <div class="row">
+		    <form class="col s12 m6" acrion="#">
+		      <div class="row">
+		        <div class="input-field col s9">
+		          <input placeholder="First name" id="first_name" type="text" class="validate" pattern="[A-Z][a-z]{1,20}$" required>
+		          <label for="first_name"></label>
+		        </div>
+		        <div class="input-field col s9">
+		          <input placeholder="Last name" id="last_name" type="text" class="validate" pattern="[A-Z][a-z]{1,20}$" required>
+		          <label for="last_name"></label>
+		        </div>
+		        <div class="input-field col s9">
+		          <input placeholder="tel +xxx(xx)xxxxxxx" id="tel" type="text" class="validate" pattern="(?:tel.)?[\+]\d{2}[\(]\d{3}[\)]\d{7}" required>
+		          <label for="tel"></label>
+		        </div>
+		        <div class="col s9">
+		          <button class="btn waves-effect waves-light" id="submit-btn" type="submit" name="action">Submit</button>
+		        </div>
+		      </div>
+		    </form>
+		    <ul class="results col s12">
+
+		    </ul>
+		  </div>
+		</div>
+
+	</div>
+
+
+<script src="lodash.js"></script>
+<script src="1.js"></script>
+</body>
+</html>
