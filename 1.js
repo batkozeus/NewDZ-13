@@ -6,8 +6,8 @@ const tel = document.getElementById("tel");
 const submitBtn = document.getElementById("submit-btn");
 const resultsList = document.querySelector(".results");
 
-const regFirstName = /[A-Z][a-z]{1,20}$/;
-const regLastName = /[A-Z][a-z]{1,20}$/;
+const regFirstName = /[A-ZА-ЯІ][a-zа-яыъії]{1,20}$/;
+const regLastName = /[A-ZА-ЯІ][a-zа-яыъії]{1,20}$/;
 const regPhone = /(?:tel.)?[\+]\d{2}[\(]\d{3}[\)]\d{7}/;
 
 
